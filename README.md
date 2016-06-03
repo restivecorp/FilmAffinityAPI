@@ -21,7 +21,7 @@ Which are the attributes to extract? In this simple script only some attributes 
 * producer
 * $director
 * $cast
-* $link
+* link
 
 ## How does it work?
 The script has two functions one to extract the contents of a given film, and other for multiple movies:
