@@ -1,4 +1,5 @@
 # FilmAffinityAPI
+Simple API to extract information from FilmAffinity
 
 ## What is it?
 It is a simple script PHP to extract basic information from a movie website FilmAffinity
