@@ -5,6 +5,12 @@
 	$prefix = "film";
 	$sufix =".html";
 
+
+	if(isset($_GET['filmcode'])) {
+   		$data = getFilmInfo($_GET['filmcode'], false);
+   		print_r($data);
+	}
+
 	/* 
 		Returns info for String parameter := filmaffinity code
 		$json parameter = true, returns data in json mode, else return film class
@@ -51,6 +57,7 @@
 		$poster = ""; 
 		$title = "";
 		$average = "";
+		$votes = "";
 		$year = "";
 		$country = "";
 		$flag = "";
@@ -104,9 +111,10 @@
 		$poster = $doc->getElementById('movie-main-image-container')->getElementsByTagName('img')->item(0)->attributes->getNamedItem('src')->nodeValue;		
 		$title = $doc->getElementById('main-title')->nodeValue;
 		$average = $doc->getElementById('movie-rat-avg')->nodeValue;
+		$votes = $doc->getElementById('movie-count-rat')->getElementsByTagName('span')->item(0)->nodeValue;
 		$link = $GLOBALS['base_url'].$GLOBALS['country'].$GLOBALS['prefix'].$film.$GLOBALS['sufix'];
 		
-		return new Film($poster, $title, $average, $year, $country, $flag, $running, $genere, $synopsis, $producer, $director, $cast, $link);
+		return new Film($poster, $title, $average, $votes, $year, $country, $flag, $running, $genere, $synopsis, $producer, $director, $cast, $link);
 	}
 
 
@@ -133,6 +141,7 @@
 	    public $poster = ""; 
 		public $title = "";
 		public $average = "";
+		public $votes = "";
 		public $year = "";
 		public $country = "";
 		public $flag = "";
@@ -144,20 +153,21 @@
 		public $cast = "";
 		public $link = "";
 	 
-	    public function __construct($arg_poster, $arg_title, $arg_average, $arg_year, $arg_country, $arg_flag, $arg_running, $arg_genere, $arg_synopsis, $arg_producer, $arg_director, $arg_cast, $arg_link){
-	        $this->poster = $arg_poster; 
-	        $this->title = $this->reemplaceSpecials($arg_title); 
-	        $this->average = $arg_average; 
-	        $this->year = $arg_year; 
-	        $this->country = $this->reemplaceSpecials($arg_country); 
-	        $this->flag = $arg_flag; 
-	        $this->running = $arg_running; 
-	        $this->genere = $this->reemplaceSpecials($arg_genere); 
-	        $this->synopsis = $this->reemplaceSpecials($arg_synopsis); 
-	        $this->producer = $this->reemplaceSpecials($arg_producer); 
-	        $this->director = $this->reemplaceSpecials($arg_director); 
-	        $this->cast = $this->reemplaceSpecials($arg_cast); 
-	        $this->link = $arg_link; 
+	    public function __construct($arg_poster, $arg_title, $arg_average, $arg_votes, $arg_year, $arg_country, $arg_flag, $arg_running, $arg_genere, $arg_synopsis, $arg_producer, $arg_director, $arg_cast, $arg_link){
+	        $this->poster = trim($arg_poster); 
+	        $this->title = trim($this->reemplaceSpecials($arg_title)); 
+	        $this->average = trim($arg_average); 
+	        $this->votes = trim($arg_votes); 
+	        $this->year = trim($arg_year); 
+	        $this->country = trim($this->reemplaceSpecials($arg_country)); 
+	        $this->flag = trim($arg_flag); 
+	        $this->running = trim($arg_running); 
+	        $this->genere = trim($this->reemplaceSpecials($arg_genere)); 
+	        $this->synopsis = trim($this->reemplaceSpecials($arg_synopsis)); 
+	        $this->producer = trim($this->reemplaceSpecials($arg_producer)); 
+	        $this->director = trim($this->reemplaceSpecials($arg_director)); 
+	        $this->cast = trim($this->reemplaceSpecials($arg_cast)); 
+	        $this->link = trim($arg_link); 
 	    }
 	   
 
