@@ -12,6 +12,7 @@ Which are the attributes to extract? In this simple script only some attributes 
 * poster
 * title
 * average
+* votes
 * year
 * country
 * flag
@@ -54,3 +55,4 @@ With these simple changes you are already adapted the script for a new language.
 1. Download the script
 2. Import it into your project PHP
 3. Calls the function that fits your needs
+4. Optionally you can get the information about a movie by invoking the url http://.../api.php?filmcode=XXXXXX This return the film info in yotu browser
