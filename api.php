@@ -139,6 +139,8 @@
 <?php
 	class Film{
 	    public $poster = ""; 
+		public $titleSmall = "";
+		public $tipo = "";
 		public $title = "";
 		public $average = "";
 		public $votes = "";
@@ -168,6 +170,25 @@
 	        $this->director = trim($this->reemplaceSpecials($arg_director)); 
 	        $this->cast = trim($this->reemplaceSpecials($arg_cast)); 
 	        $this->link = trim($arg_link); 
+
+			$this->tipo = "Película";
+
+			if(strpos($this->title, "(Serie de TV)")){
+				$this->title = str_replace("(Serie de TV)", "",$this->title);
+				$this->tipo = "Serie";
+			}
+
+			if(strpos($this->title, "(TV)")){
+					$this->title = str_replace(" (TV)", "", $this->title);
+				$this->tipo = "Documental";
+				}
+
+			if(strlen($this->title) > 35) {
+				$this->titleSmall = substr($this->title, 0, 35) . "...";
+			}else {
+				$this->titleSmall = $this->title;
+			}
+
 	    }
 	   
 
