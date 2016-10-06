@@ -13,11 +13,11 @@ Example of use API :: https://github.com/ruboweb/FilmAffinityAPI
 
 
 ## Screenshots
-![alt tag](https://github.com/ruboweb/RasPIstatus/blob/master/screenshots/1.png)
-![alt tag](https://github.com/ruboweb/RasPIstatus/blob/master/screenshots/2.png)
-![alt tag](https://github.com/ruboweb/RasPIstatus/blob/master/screenshots/3.png)
-![alt tag](https://github.com/ruboweb/RasPIstatus/blob/master/screenshots/4.png)
-![alt tag](https://github.com/ruboweb/RasPIstatus/blob/master/screenshots/5.png)
-![alt tag](https://github.com/ruboweb/RasPIstatus/blob/master/screenshots/6.png)
-![alt tag](https://github.com/ruboweb/RasPIstatus/blob/master/screenshots/7.png)
-![alt tag](https://github.com/ruboweb/RasPIstatus/blob/master/screenshots/8.png)
+![alt tag](https://github.com/ruboweb/FilmAffinityAPI/blob/master/videoinfo/screenshots/1.png)
+![alt tag](https://github.com/ruboweb/FilmAffinityAPI/blob/master/videoinfo/screenshots/2.png)
+![alt tag](https://github.com/ruboweb/FilmAffinityAPI/blob/master/videoinfo/screenshots/3.png)
+![alt tag](https://github.com/ruboweb/FilmAffinityAPI/blob/master/videoinfo/screenshots/4.png)
+![alt tag](https://github.com/ruboweb/FilmAffinityAPI/blob/master/videoinfo/screenshots/5.png)
+![alt tag](https://github.com/ruboweb/FilmAffinityAPI/blob/master/videoinfo/screenshots/6.png)
+![alt tag](https://github.com/ruboweb/FilmAffinityAPI/blob/master/videoinfo/screenshots/7.png)
+![alt tag](https://github.com/ruboweb/FilmAffinityAPI/blob/master/videoinfo/screenshots/8.png)
